@@ -1,0 +1,14 @@
+{
+  "name": "rust-image-resizer",
+  "version": "1.0.0",
+  "description": "A image resizer to letterbox images allowing for them to fit on signs.",
+  "main": "resize.js",
+  "scripts": {
+    "help": "node resize.js help"
+  },
+  "author": "andandy",
+  "license": "ISC",
+  "dependencies": {
+    "sharp": "^0.28.3"
+  }
+}
