@@ -20,19 +20,19 @@ const signs = { // if width and height is 1 then we did not record the size of t
         two_sided_ornate_hanging_sign: {width:1,height:1},
         two_sided_town_sign_post:      {width:1,height:1},
     },
-}
+};
 
 if(args.toString().toLowerCase().includes('help') || args=="" || args.length == 0){ // check for arguments or help
 	console.log("Help Argument Parsed...\nSyntax:\n\tnode resize.js <folder> <sign type>\n\tWhere <folder> is a folder containing images.\n\tWhere <sign type> is one or more of the following types:");
 	Object.keys(signs.sizes).forEach(element => {
 		console.log("\t\t"+element);
-	})
+	});
 	console.log("Example:\n\tnode resize.js ImgFolder spinner small_ne");
 	process.exit();
 }
 
 var path_;
-for(path__ of args){
+for(let path__ of args){
     if(fs.existsSync(path__)){
         path_ = path__ +"\\";
         args.splice(args.indexOf(path__),1);
@@ -48,7 +48,7 @@ if(!path_){
     		process.exit();
     	}
 }
-console.log('\x1b[32m%s\x1b[0m',"Using folder: "+path_)
+console.log('\x1b[32m%s\x1b[0m',"Using folder: "+path_);
 filein = fs.readdirSync(path_);
 
 Object.keys(filein).forEach(async element => {
