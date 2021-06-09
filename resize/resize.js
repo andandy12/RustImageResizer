@@ -43,10 +43,10 @@ if(!path_){
 	path_ = ".\\in\\";
 	console.log("No folder specified in arguments");
 	if(!fs.existsSync(path_)){
-    	fs.mkdirSync(path_);
-    	console.log("Created the folder to place images in.");
-    	process.exit();
-    }
+    		fs.mkdirSync(path_);
+    		console.log("Created the folder to place images in.");
+    		process.exit();
+    	}
 }
 console.log('\x1b[32m%s\x1b[0m',"Using folder: "+path_)
 filein = fs.readdirSync(path_);
